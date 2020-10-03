@@ -50,8 +50,6 @@ endfunction
 function! test#phpt#phpunit#executable() abort
     if exists('g:test#phpt#phpunit#executable')
         return g:test#phpt#phpunit#executable
-    elseif filereadable('./vendor/bin/paratest')
-        return './vendor/bin/paratest'
     elseif filereadable('./vendor/bin/phpunit')
         return './vendor/bin/phpunit'
     elseif filereadable('./bin/phpunit')
