@@ -26,9 +26,6 @@ if exists("g:loaded_phpt")
 endif
 let g:loaded_phpt = 1
 
-if !exists('g:phpt_test_support')
-    let test#custom_runners = {'phpt': ['PhpUnit']}
-endif
 " Teardown: {{{1
 " reset &cpo back to users setting
 let &cpo = s:save_cpo
