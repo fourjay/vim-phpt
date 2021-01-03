@@ -1,4 +1,4 @@
-if exists("b:did_ftpluginphpt")
+if exists('b:did_ftpluginphpt')
     finish
 endif
 " Don't reload plugin for this buffer
