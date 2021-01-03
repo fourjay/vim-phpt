@@ -10,8 +10,13 @@ if exists(":CompilerSet") != 2 " older Vim always used :setlocal
     command -nargs=* CompilerSet setlocal <args>
 endif
 
+" assume phpunit
 CompilerSet makeprg=phpunit\ %
-" CompilerSet errorformat = 
+CompilerSet errorformat=
+            \%E%n)\ %f,
+            \%Z%f:%l,
+            \%C%m,
+            \%-G%.%#
 
 " Cleanup at end
 let &cpoptions = s:save_cpo
