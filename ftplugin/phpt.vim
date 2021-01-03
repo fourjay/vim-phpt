@@ -7,7 +7,8 @@ let s:save_cpo = &cpoptions
 set cpoptions&vim
 " setlocal completefunc=syntaxcomplete#Complete
 " setlocal iskeyword=
-setlocal commentstring=# %s
+setlocal commentstring=#\ %s
+compiler phpt
 
 if !exists('g:phpt_test_support')
     let test#custom_runners = {'phpt': ['PhpUnit']}
